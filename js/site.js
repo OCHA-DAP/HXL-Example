@@ -24,7 +24,7 @@ $.when(tagsCall,indexCall).then(function(tagsArgs,indexArgs){
     tags.forEach(function(t){
     	if (cats.indexOf(t['#meta+category'])==-1) {
     		cats.push(t['#meta+category']);
-    		$('#tags').append('<div id="'+t['#meta+category'].replace(',',' ').split(' ')[0]+'" class="tag_cat col-md-2"><h4>' + t['#meta+category'] + '</h4></div>');
+    		$('#tags').append('<div id="'+t['#meta+category'].replace(',',' ').split(' ')[0]+'" class="tag_cat col-md-2 col-xs-4"><h4>' + t['#meta+category'] + '</h4></div>');
     	}
     	$('#'+t['#meta+category'].replace(',',' ').split(' ')[0]).append('<p id="'+t['#meta+tag'].substr(1)+'" class="tag">'+t['#meta+tag']+'</p>');
     	$(t['#meta+tag']).on('click',function(){
