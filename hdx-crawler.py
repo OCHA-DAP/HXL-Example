@@ -17,8 +17,8 @@ CKAN_URL = "https://data.humdata.org"
 
 indexFile = {}
 
-#with open('working/index_1140.json') as json_data:
-#    indexFile = json.load(json_data)
+with open('working/index_3140.json') as json_data:
+    indexFile = json.load(json_data)
 
 
 def populateIndex(uniqueTags,sampleData,i,attributes,md5,name,url):
@@ -182,9 +182,9 @@ for package in packages:
 
     # for each resource in a package (some packages have multiple csv files for example), print the name, url and format
     for resource in package["resources"]:
-        if i>0:
+        if i>3140:
             print "---------------------"
-            print("  {}".format(resource["name"]))
+            print("  {}".format(resource["name"].encode('ascii', 'ignore')))
             print("    {}".format(resource["url"]))
             print resource["format"]
 
