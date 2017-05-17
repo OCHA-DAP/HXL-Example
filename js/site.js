@@ -12,7 +12,7 @@ var indexCall = $.ajax({
     dataType: 'json',
 });
 
-$('#taginst').on('hover click',function(){
+$('#taginst').on('mouseover click',function(){
     $('#hover').html('Click or tap a tag and see examples of it in use');
     $('#tags').slideDown();
 });
