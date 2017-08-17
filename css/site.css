@@ -7,17 +7,18 @@ h4 {
 }
 
 td {
-	border-width:1px;
+	border-width:0.5px;
 	border-style:solid;
 	padding:5px;
+	border-color:#aaa;
 }
 
 .row0 {
-	background-color:#EF9A9A;
+	color:#1565C0;
 }
 
 .row1 {
-	background-color:#ECE4B7;
+	color:#D50000;
 }
 
 .sampletable {
@@ -46,25 +47,24 @@ h2 {
 }
 
 .highlight0 {
-	background-color:#D50000;
-	color:#ffffff;
-	border-color:#000000;
+	background-color:#eeeeee;
+	color:#0D47A1;
 }
 
 .highlight1 {
-	background-color:#FDD835;
+	background-color:#eeeeee;
 }
 
 .highlight2 {
-	background-color:#dddddd;
+	background-color:#eeeeee;
 }
 
 .highlight3 {
-	background-color:#dddddd;
+	background-color:#eeeeee;
 }
 
 .highlight4 {
-	background-color:#dddddd;
+	background-color:#eeeeee;
 }
 
 .tag {
@@ -75,4 +75,8 @@ h2 {
 .noexample {
 	font:2em;
 	color:#999999;
+}
+
+#tagdescription {
+	font-size:1.5em;
 }
