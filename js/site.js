@@ -28,6 +28,7 @@ $.when(tagsCall,indexCall).then(function(tagsArgs,indexArgs){
     	}
     	$('#'+t['#meta+category'].replace(',',' ').split(' ')[0]).append('<p id="'+t['#meta+tag'].substr(1)+'" class="tag">'+t['#meta+tag']+'</p>');
     	$(t['#meta+tag']).on('click',function(){
+            //window.location.search = $.query.set("tag", t['#meta+tag']);
             $('#tags').slideUp();
             $('#hover').html('Hover or tap here to select other tags');
     		indextag = indexArgs[0][t['#meta+tag']];
