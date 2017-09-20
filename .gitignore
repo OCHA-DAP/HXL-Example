@@ -1,3 +1,5 @@
 working/
 working_old/
 .DS_Store
+dist/
+node_modules/
