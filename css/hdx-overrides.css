@@ -1,0 +1,88 @@
+.hxl-example {
+    background: none;
+    color: #333;
+}
+h1 {
+    font-family: 'Gotham-Book', sans-serif;
+    font-size: 48px;
+    color: #333;
+    line-height: 1;
+}
+h4 {
+    font-family: 'Gotham-Bold', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+td {
+    font-size: 14px;
+    padding: 5px;
+}
+#tag {
+    color: #f2645a;
+    margin: 0;
+    line-height: 1;
+}
+#hover {
+    font-family: 'Gotham-Book', sans-serif;
+    font-size: 24px;
+    color: #333;
+}
+#tagdescription {
+    line-height: 1;
+}
+.tag {
+    color: #007CE0;
+}
+.highlight0 {
+    color: #333;
+}
+.row0 {
+    font-family: 'Gotham-Bold', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+.row1 {
+    color: #f2645a;
+}
+// .hxl-example {
+//     background: none;
+//     color: @darkGrayColor;
+// }
+// h1 {
+//     .gothamBookFont(48px);
+//     color: @darkGrayColor;
+//     line-height: 1;
+// }
+// h4 {
+//     .gothamBoldFont(14px);
+//     color: @darkGrayColor;
+// }
+// td {
+//     font-size: 14px;
+//     padding: 5px;
+// }
+// #tag {
+//     color: @orangeColor;
+//     margin: 0;
+//     line-height: 1;
+// }
+// #hover {
+//     .gothamBookFont(24px);
+//     color: @darkGrayColor;
+// }
+// #tagdescription {
+//     line-height: 1;
+// }
+// .tag {
+//     color: @blueColor;
+// }
+// .highlight0 {
+//     color: @darkGrayColor;
+// }
+// .row0 {
+//     .gothamBoldFont(16px);
+//     color: @darkGrayColor;
+// }
+// .row1 {
+//     color: @orangeColor;
+// }
