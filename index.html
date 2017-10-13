@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="dist/assets/css/style.css"/>
         <script src="js/jquery.js"></script>
         <script src="js/d3.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-46399763-1']);
@@ -24,22 +25,14 @@
         <div class="container">
             <div id="header" class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center">HXL Example</h1>
-                    <p class="text-center"><a href="http://hxlstandard.org/" target="_blank">hxlstandard.org</a></p>
+                    <h1>HXL Example <span><a href="http://hxlstandard.org/" target="_blank">hxlstandard.org</a></span></h1>
                 </div>
             </div>
-            <div id="taginst" class="row">
-                <div class="col-md-12">
-                    <p id="hover">Click or tap a tag and see examples of it in use</p>
+            <div class="row">
+                <div class="col-md-2">  
+                    <div id="tags" data-spy="affix" data-offset-top="78"></div>
                 </div>
-            </div>
-            <div id="tags" class="row">
-            </div>
-            <div id="overview" class="row border"><div class="col-md-3"><h2 id="tag"></h2></div><div id="tagdescription" class="col-md-9"></div></div>
-            <div id="examples" class="row border">
-                <div id="samples" class="col-md-10">
-                </div>
-                <div id="attributes" class="col-md-2">
+                <div class="col-md-10" id="content">
                 </div>
             </div>
         </div>
