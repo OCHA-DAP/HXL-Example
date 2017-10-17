@@ -78,7 +78,12 @@ a {
 }
 .tag {
     color: @orangeColor;
+    cursor: pointer;
     margin-bottom: 0;
+    &:hover,
+    &:focus {
+        color: darken(@orangeColor, 20%);
+    }
 }
 .tag_cat {
     margin-bottom: 20px;
@@ -94,7 +99,7 @@ a {
     color: @orangeColor;
 }
 .affix {
-    height: 100vh;
+    height: 100vh;//575px;
     overflow-y: auto;
     padding-top: 10px;
     padding-right: 15px;

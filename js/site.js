@@ -12,6 +12,7 @@ var indexCall = $.ajax({
     dataType: 'json',
 });
 
+
 // $('#taginst').on('mouseover click',function(){
 //     $('#hover').html('Click or tap a tag and see examples of it in use');
 //     $('#tags').slideDown();
@@ -63,7 +64,7 @@ $.when(tagsCall,indexCall).then(function(tagsArgs,indexArgs){
     				    	currenttag.find('.samples').append('<div id="sample'+i+'"></div>');
     				    	currenttag.find('#sample'+i).append('<p class="sample-name">'+response.name+'</p>');
     				    	var hdx = response.url.split('resource')[0];
-    				    	currenttag.find('#sample'+i).append('<p><a href="'+response.url+'">File Download</a> | <a href="'+hdx+'">HDX Page</a></p>');
+    				    	currenttag.find('#sample'+i).append('<p><a href="'+response.url+'">File Download</a> | <a href="'+hdx+'" target="_blank">HDX Page</a></p>');
     				    	currenttag.find('#sample'+i).append('<div id="sampletablediv'+i+'" class="sampletable"></div>');
     				    	currenttag.find('#sampletablediv'+i).append('<table id="sampletable'+i+'"></table>');
     				    	response.data.forEach(function(r,j){
@@ -92,7 +93,7 @@ $.when(tagsCall,indexCall).then(function(tagsArgs,indexArgs){
         //define click event for each tag
         $(t['#meta+tag']).on('click',function(){
             var tag = $('#tag'+ index);
-            $('html,body').animate({scrollTop: tag.offset().top}, 'slow');
+            $('body').animate({scrollTop: tag.offset().top}, 'slow');
         });
     });
 });
