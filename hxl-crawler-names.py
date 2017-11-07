@@ -15,17 +15,18 @@ def find_hxl_datasets(start, rows):
 
 # Open a connection to HDX
 ckan = ckanapi.RemoteCKAN(CKAN_URL)
-result_start_pos = 0
+result_start_pos = 1000
 result_page_size = 10000
 
-result = find_hxl_datasets(result_start_pos, result_page_size)
-result_total_count = result["count"]
-print(result["count"])
-
+result = find_hxl_datasets(0, result_page_size)
 packages = result["results"]
+result2 = find_hxl_datasets(1000, result_page_size)
+packages2 = result2["results"]
+
+allpackages = packages + packages2
 
 # Iterate through all the datasets ("packages") and resources on HDX
 i=0
-for package in packages:
+for package in allpackages:
     # package = ckan.action.package_show(id=package_id)
     print("Package: " + format(package["title"]))

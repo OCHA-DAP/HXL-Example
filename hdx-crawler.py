@@ -15,10 +15,10 @@ DELAY = 2
 CKAN_URL = "https://data.humdata.org"
 """Base URL for the CKAN instance."""
 
-indexFile = {}
+#indexFile = {}
 
-#with open('working/index_3140.json') as json_data:
-#    indexFile = json.load(json_data)
+with open('working/index_3350.json') as json_data:
+    indexFile = json.load(json_data)
 
 
 def populateIndex(uniqueTags,sampleData,i,attributes,md5,name,url,package_id):
@@ -161,27 +161,26 @@ def find_hxl_datasets(start, rows):
 
 # Open a connection to HDX
 ckan = ckanapi.RemoteCKAN(CKAN_URL)
-result_start_pos = 0
+result_start_pos = 1000
 result_page_size = 4000
 
-result = find_hxl_datasets(result_start_pos, result_page_size)
-result_total_count = result["count"]
-print(result["count"])
-print(result["results"][0]["title"])
-
-
+result = find_hxl_datasets(0, result_page_size)
 packages = result["results"]
+result2 = find_hxl_datasets(1000, result_page_size)
+packages2 = result2["results"]
+
+allpackages = packages + packages2
 
 # Iterate through all the datasets ("packages") and resources on HDX
 i=0
-for package in packages:
+for package in allpackages:
     # package = ckan.action.package_show(id=package_id)
     print("Package: " + format(package["title"]))
     print package
     # for each resource in a package (some packages have multiple csv files for example), print the name, url and format
     for resource in package["resources"]:
 #        if i>3140:
-        if i>-1:
+        if i>3350:
             print "---------------------"
             print("  {}".format(resource["name"].encode('ascii', 'ignore')))
             print("    {}".format(resource["url"]))
