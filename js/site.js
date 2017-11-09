@@ -57,7 +57,7 @@ $.when(tagsCall,indexCall).then(function(tagsArgs,indexArgs){
     				    success:function(response){
     				    	$('#samples').append('<div id="sample'+i+'"></div>');
     				    	$('#sample'+i).append('<h3>'+response.name+'</h3>');
-    				    	var hdx = response.url.split('resource')[0];
+    				    	var hdx = 'https://data.humdata.org/dataset/'+response.package_id;
     				    	$('#sample'+i).append('<p><a href="'+response.url+'">File Download</a> | <a href="'+hdx+'">HDX Page</a></p>');
     				    	$('#sample'+i).append('<div id="sampletablediv'+i+'" class="sampletable pre-scrollable"></div>');
     				    	$('#sampletablediv'+i).append('<table id="sampletable'+i+'"></table>');
